@@ -1,0 +1,18 @@
+This project is developed to automatically identify the breed of cattle and buffalo from images. 
+India has many different breeds, and many of them look very similar.
+Because of this, manual identification is often difficult and can lead to mistakes.
+An automated system can help farmers and livestock authorities identify breeds more accurately and make better decisions.
+
+The system uses a deep learning model based on the VGG16 Convolutional Neural Network. 
+The model is trained using images of 41 different cattle and buffalo breeds. 
+Before giving the images to the model, they are converted to RGB format, resized to 150×150 pixels, and normalized. 
+This helps the model process the images more efficiently and learn important visual features like body shape, coat pattern, and horn structure.
+
+When an image is uploaded, it is preprocessed and passed to the trained model. 
+The model predicts the probabilities for all breed classes and selects the breed with the highest probability. 
+The system then displays the predicted breed, whether it is cattle or buffalo, and a confidence score.
+
+The confidence score is used to evaluate the prediction. 
+If the confidence is above 50%, the result is considered valid. 
+If it is below 50%, the prediction is marked as low confidence. 
+This helps prevent unreliable results.
