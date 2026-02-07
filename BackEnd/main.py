@@ -8,6 +8,7 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 import tensorflow as tf
+
 import os
 
 # ---------------- Logging ----------------
@@ -115,6 +116,7 @@ async def detect_objects(
     except Exception as e:
         logger.error(f"Error: {str(e)}\n{traceback.format_exc()}")
         return JSONResponse(content={'error': str(e)}, status_code=500)
+
 
 # ---------------- Run ----------------
 if __name__ == "__main__":
